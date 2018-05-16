@@ -1,14 +1,67 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>
-      Ionic Blank
+      Joao Luiz
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-grid>
+    <ion-row text-center id="info-row">
+      <ion-col>
+        <ion-avatar>
+          <img src="assets/imgs/avatar.png" height="200px" width="200px">
+        </ion-avatar>
+        <h3>Base in</h3>
+        <h4>Santa Catarina, Brazil</h4>
+      </ion-col>
+    </ion-row>
+    <ion-row text-center id="contact-icons">
+      <ion-col>
+        <ion-icon name="call" color="danger"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="text" color="danger"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="globe" color="danger"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="more" color="danger"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <h2 text-center>
+      <ion-icon name="paper" color="danger"></ion-icon>
+      Social Feed
+    </h2>
+    <ion-row class="social-row" *ngFor="let feed of socialFeed">
+      <ion-col col-2>
+        <ion-avatar>
+          <img src="assets/imgs/avatar.png"/>
+        </ion-avatar>
+      </ion-col>
+      <ion-col col-10>
+        <ion-row>
+          <ion-col>
+            <h3> Joao Luiz @joaoluiz </h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <p>{{feed.post}}</p>
+        </ion-row>
+        <ion-row text-center class="social-interaction-row">
+          <ion-col>
+            <ion-icon name="undo" color="danger"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="repeat" color="danger"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="heart" color="danger"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
